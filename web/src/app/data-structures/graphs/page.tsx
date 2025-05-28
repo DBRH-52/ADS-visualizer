@@ -5,10 +5,12 @@ import React from "react";
 import VisualizationFrame from '@/components/frames/VisualizationFrame';
 import CodeFrame from '@/components/frames/CodeFrame';
 import ExplanationFrame from '@/components/frames/ExplanationFrame';
+import Breadcrumbs from '@/components/navigation/Breadcrumbs';
 
 export default function GraphsPage() {
     return (
         <main style={{ padding: '20px' }}>
+            <Breadcrumbs />
             <h1>Graphs</h1>
             <div style={{ 
                 display: 'flex', 

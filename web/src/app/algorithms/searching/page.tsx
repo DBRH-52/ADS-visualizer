@@ -5,10 +5,12 @@ import React from "react";
 import VisualizationFrame from '@/components/frames/VisualizationFrame';
 import CodeFrame from '@/components/frames/CodeFrame';
 import ExplanationFrame from '@/components/frames/ExplanationFrame';
+import Breadcrumbs from '@/components/navigation/Breadcrumbs';
 
 export default function SearchingAlgorithmsPage() {
     return (
         <main style={{ padding: '20px' }}>
+            <Breadcrumbs />
             <h1>Searching Algorithms</h1>
             <div style={{ 
                 display: 'flex', 

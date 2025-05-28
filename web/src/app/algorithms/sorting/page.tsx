@@ -5,24 +5,24 @@ import React from 'react';
 import VisualizationFrame from '@/components/frames/VisualizationFrame';
 import CodeFrame from '@/components/frames/CodeFrame';
 import ExplanationFrame from '@/components/frames/ExplanationFrame';
+import Breadcrumbs from '@/components/navigation/Breadcrumbs';
 
 export default function SortingAlgorithmsPage() {
   return (
     <main style={{ padding: '20px' }}>
+      <Breadcrumbs />
       <h1>Sorting Algorithms</h1>
       <div style={{ 
         display: 'flex', 
         width: '100%',
         gap: '24px',
         minHeight: 'calc(100vh - 200px)',
-        alignItems: 'stretch' // ensures all frames have the same height
+        alignItems: 'stretch' 
       }}>
-        {/* Visualization gets more space */}
         <div style={{ flex: '2' }}>
           <VisualizationFrame />
         </div>
         
-        {/* Code and Explanation share remaining space */}
         <div style={{ flex: '1.5' }}>
           <CodeFrame />
         </div>
