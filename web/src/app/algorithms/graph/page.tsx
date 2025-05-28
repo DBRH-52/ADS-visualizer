@@ -2,17 +2,33 @@
 // URL: /algorithms/graph
 
 import React from "react";
+import VisualizationFrame from '@/components/frames/VisualizationFrame';
+import CodeFrame from '@/components/frames/CodeFrame';
+import ExplanationFrame from '@/components/frames/ExplanationFrame';
 
-export default function GraphAlgorithms() {
+export default function GraphAlgorithmsPage() {
     return (
-        <div>
+        <main style={{ padding: '20px' }}>
             <h1>Graph Algorithms</h1>
-            <ul>
-                <li>Dijkstra's Algorithm</li>
-                <li>Kruskal's Algorithm</li>
-                <li>Prim's Algorithm</li>
-                <li>Topological Sort</li>
-            </ul>
-        </div>
+            <div style={{ 
+                display: 'flex', 
+                width: '100%',
+                gap: '24px',
+                minHeight: 'calc(100vh - 200px)',
+                alignItems: 'stretch'
+            }}>
+                <div style={{ flex: '2' }}>
+                    <VisualizationFrame />
+                </div>
+                
+                <div style={{ flex: '1.5' }}>
+                    <CodeFrame />
+                </div>
+                
+                <div style={{ flex: '1' }}>
+                    <ExplanationFrame />
+                </div>
+            </div>
+        </main>
     );
 } 

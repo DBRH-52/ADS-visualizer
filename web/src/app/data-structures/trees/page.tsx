@@ -2,18 +2,33 @@
 // URL: /data-structures/trees
 
 import React from "react";
+import VisualizationFrame from '@/components/frames/VisualizationFrame';
+import CodeFrame from '@/components/frames/CodeFrame';
+import ExplanationFrame from '@/components/frames/ExplanationFrame';
 
-export default function Trees() {
+export default function TreesPage() {
     return (
-        <div>
+        <main style={{ padding: '20px' }}>
             <h1>Trees</h1>
-            <ul>
-                <li>Binary Trees</li>
-                <li>Binary Search Trees (BST)</li>
-                <li>AVL Trees</li>
-                <li>Red-Black Trees</li>
-                <li>B-Trees</li>
-            </ul>
-        </div>
+            <div style={{ 
+                display: 'flex', 
+                width: '100%',
+                gap: '24px',
+                minHeight: 'calc(100vh - 200px)',
+                alignItems: 'stretch'
+            }}>
+                <div style={{ flex: '2' }}>
+                    <VisualizationFrame />
+                </div>
+                
+                <div style={{ flex: '1.5' }}>
+                    <CodeFrame />
+                </div>
+                
+                <div style={{ flex: '1' }}>
+                    <ExplanationFrame />
+                </div>
+            </div>
+        </main>
     );
 } 

@@ -2,18 +2,33 @@
 // URL: /data-structures/graphs
 
 import React from "react";
+import VisualizationFrame from '@/components/frames/VisualizationFrame';
+import CodeFrame from '@/components/frames/CodeFrame';
+import ExplanationFrame from '@/components/frames/ExplanationFrame';
 
-export default function Graphs() {
+export default function GraphsPage() {
     return (
-        <div>
+        <main style={{ padding: '20px' }}>
             <h1>Graphs</h1>
-            <ul>
-                <li>Directed Graphs</li>
-                <li>Undirected Graphs</li>
-                <li>Weighted Graphs</li>
-                <li>Adjacency Matrix</li>
-                <li>Adjacency List</li>
-            </ul>
-        </div>
+            <div style={{ 
+                display: 'flex', 
+                width: '100%',
+                gap: '24px',
+                minHeight: 'calc(100vh - 200px)',
+                alignItems: 'stretch'
+            }}>
+                <div style={{ flex: '2' }}>
+                    <VisualizationFrame />
+                </div>
+                
+                <div style={{ flex: '1.5' }}>
+                    <CodeFrame />
+                </div>
+                
+                <div style={{ flex: '1' }}>
+                    <ExplanationFrame />
+                </div>
+            </div>
+        </main>
     );
 } 
