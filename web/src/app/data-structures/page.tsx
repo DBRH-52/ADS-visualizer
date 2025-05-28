@@ -1,30 +1,25 @@
 // Data Structures main page
 // URL: /data-structures
 
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import VisualizationFrame from '@/components/VisualizationFrame';
+import CodeFrame from '@/components/CodeFrame';
+import ExplanationFrame from '@/components/ExplanationFrame';
 
-export default function DataStructures() {
-    return (
-        <div>
-            <h1>Data Structures</h1>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
-                <li style={{ margin: '10px 0' }}>
-                    <Link href="/data-structures/arrays" style={{ fontSize: '1.2em' }}>
-                        Arrays and Lists
-                    </Link>
-                </li>
-                <li style={{ margin: '10px 0' }}>
-                    <Link href="/data-structures/trees" style={{ fontSize: '1.2em' }}>
-                        Trees
-                    </Link>
-                </li>
-                <li style={{ margin: '10px 0' }}>
-                    <Link href="/data-structures/graphs" style={{ fontSize: '1.2em' }}>
-                        Graphs
-                    </Link>
-                </li>
-            </ul>
-        </div>
-    );
+export default function DataStructuresPage() {
+  return (
+    <main style={{ padding: '20px' }}>
+      <h1>Data Structures Visualization</h1>
+      <div style={{ 
+        display: 'flex', 
+        width: '100%',
+        gap: '16px',
+        minHeight: 'calc(100vh - 200px)'
+      }}>
+        <VisualizationFrame />
+        <CodeFrame />
+        <ExplanationFrame />
+      </div>
+    </main>
+  );
 } 
