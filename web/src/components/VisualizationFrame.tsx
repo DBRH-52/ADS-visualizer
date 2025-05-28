@@ -1,0 +1,20 @@
+import React from 'react';
+
+const VisualizationFrame = () => {
+  return (
+    <div style={{
+      border: '2px solid #ccc',
+      borderRadius: '4px',
+      padding: '16px',
+      margin: '8px',
+      minHeight: '300px',
+      backgroundColor: '#fff',
+      boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+    }}>
+      <h3>Visualization Frame</h3>
+      {/* TODO -  visualization content  */}
+    </div>
+  );
+};
+
+export default VisualizationFrame; 
