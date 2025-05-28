@@ -3,6 +3,7 @@
 
 import React from 'react';
 import CategoryCard from '@/components/navigation/CategoryCard';
+import styles from '@/styles/pages/category.module.css';
 
 export default function DataStructuresPage() {
   const categories = [
@@ -21,13 +22,9 @@ export default function DataStructuresPage() {
   ];
 
   return (
-    <main style={{ padding: '20px' }}>
-      <h1>Data Structures</h1>
-      <div style={{ 
-        display: 'grid', 
-        gap: '16px',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-      }}>
+    <main className={styles.container}>
+      <h1 className={styles.title}>Data Structures</h1>
+      <div className={styles.grid}>
         {categories.map((category) => (
           <CategoryCard 
             key={category.path}

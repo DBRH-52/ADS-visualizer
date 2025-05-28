@@ -1,14 +1,19 @@
-import React from 'react';
+'use client';
 
-const CodeFrame = () => {
+import React from 'react';
+import styles from '@/styles/components/frames/Frame.module.css';
+
+interface CodeFrameProps {
+  children?: React.ReactNode;
+}
+
+const CodeFrame: React.FC<CodeFrameProps> = ({ children }) => {
   return (
-    <div style={{
-      border: '1px solid #ddd',
-      padding: '16px',
-      height: '100%'
-    }}>
-      <h3>Code Frame</h3>
-      {/* TODO -  code content  */}
+    <div className={styles.frame}>
+      <h3 className={styles.title}>Code</h3>
+      <div className={styles.content}>
+        {children || 'Code content will be displayed here'}
+      </div>
     </div>
   );
 };

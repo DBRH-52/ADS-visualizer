@@ -1,14 +1,19 @@
-import React from 'react';
+'use client';
 
-const VisualizationFrame = () => {
+import React from 'react';
+import styles from '@/styles/components/frames/Frame.module.css';
+
+interface VisualizationFrameProps {
+  children?: React.ReactNode;
+}
+
+const VisualizationFrame: React.FC<VisualizationFrameProps> = ({ children }) => {
   return (
-    <div style={{
-      border: '1px solid #ddd',
-      padding: '16px',
-      height: '100%'
-    }}>
-      <h3>Visualization Frame</h3>
-      {/* TODO -  visualization content  */}
+    <div className={styles.frame}>
+      <h3 className={styles.title}>Visualization</h3>
+      <div className={styles.content}>
+        {children || 'Visualization content will be displayed here'}
+      </div>
     </div>
   );
 };
