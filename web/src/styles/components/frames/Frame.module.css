@@ -1,0 +1,22 @@
+.frame {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  height: 100%;
+  background-color: var(--background);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.content {
+  height: calc(100% - 3rem);
+  overflow: auto;
+} 

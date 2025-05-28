@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import styles from '@/styles/components/CategoryCard.module.css';
 
 interface CategoryCardProps {
   title: string;
@@ -10,14 +11,10 @@ const CategoryCard = ({ title, path }: CategoryCardProps) => {
   return (
     <Link 
       href={path}
-      style={{ textDecoration: 'none', color: 'inherit' }}
+      className={styles.link}
     >
-      <div style={{
-        border: '1px solid #ddd',
-        padding: '16px',
-        textAlign: 'center'
-      }}>
-        <h2 style={{ margin: 0 }}>{title}</h2>
+      <div className={styles.card}>
+        <h2 className={styles.title}>{title}</h2>
       </div>
     </Link>
   );

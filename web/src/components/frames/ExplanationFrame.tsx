@@ -1,14 +1,19 @@
-import React from 'react';
+'use client';
 
-const ExplanationFrame = () => {
+import React from 'react';
+import styles from '@/styles/components/frames/Frame.module.css';
+
+interface ExplanationFrameProps {
+  children?: React.ReactNode;
+}
+
+const ExplanationFrame: React.FC<ExplanationFrameProps> = ({ children }) => {
   return (
-    <div style={{
-      border: '1px solid #ddd',
-      padding: '16px',
-      height: '100%'
-    }}>
-      <h3>Explanation Frame</h3>
-      {/* TODO - Explanation content */}
+    <div className={styles.frame}>
+      <h3 className={styles.title}>Explanation</h3>
+      <div className={styles.content}>
+        {children || 'Explanation content will be displayed here'}
+      </div>
     </div>
   );
 };
