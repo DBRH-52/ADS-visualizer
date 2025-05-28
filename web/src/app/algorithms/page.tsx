@@ -2,9 +2,9 @@
 // URL: /algorithms
 
 import React from 'react';
-import VisualizationFrame from '@/components/VisualizationFrame';
-import CodeFrame from '@/components/CodeFrame';
-import ExplanationFrame from '@/components/ExplanationFrame';
+import VisualizationFrame from '@/components/frames/VisualizationFrame';
+import CodeFrame from '@/components/frames/CodeFrame';
+import ExplanationFrame from '@/components/frames/ExplanationFrame';
 
 export default function AlgorithmsPage() {
     return (
