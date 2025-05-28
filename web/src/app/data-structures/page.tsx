@@ -2,23 +2,39 @@
 // URL: /data-structures
 
 import React from 'react';
-import VisualizationFrame from '@/components/frames/VisualizationFrame';
-import CodeFrame from '@/components/frames/CodeFrame';
-import ExplanationFrame from '@/components/frames/ExplanationFrame';
+import CategoryCard from '@/components/navigation/CategoryCard';
 
 export default function DataStructuresPage() {
+  const categories = [
+    {
+      title: 'Arrays and Lists',
+      path: '/data-structures/arrays'
+    },
+    {
+      title: 'Trees',
+      path: '/data-structures/trees'
+    },
+    {
+      title: 'Graphs',
+      path: '/data-structures/graphs'
+    }
+  ];
+
   return (
     <main style={{ padding: '20px' }}>
-      <h1>Data Structures Visualization</h1>
+      <h1>Data Structures</h1>
       <div style={{ 
-        display: 'flex', 
-        width: '100%',
+        display: 'grid', 
         gap: '16px',
-        minHeight: 'calc(100vh - 200px)'
+        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
       }}>
-        <VisualizationFrame />
-        <CodeFrame />
-        <ExplanationFrame />
+        {categories.map((category) => (
+          <CategoryCard 
+            key={category.path}
+            title={category.title}
+            path={category.path}
+          />
+        ))}
       </div>
     </main>
   );

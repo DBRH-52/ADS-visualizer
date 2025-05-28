@@ -2,24 +2,40 @@
 // URL: /algorithms
 
 import React from 'react';
-import VisualizationFrame from '@/components/frames/VisualizationFrame';
-import CodeFrame from '@/components/frames/CodeFrame';
-import ExplanationFrame from '@/components/frames/ExplanationFrame';
+import CategoryCard from '@/components/navigation/CategoryCard';
 
 export default function AlgorithmsPage() {
-    return (
-        <main style={{ padding: '20px' }}>
-            <h1>Algorithms Visualization</h1>
-            <div style={{ 
-                display: 'flex', 
-                width: '100%',
-                gap: '16px',
-                minHeight: 'calc(100vh - 200px)'
-            }}>
-                <VisualizationFrame />
-                <CodeFrame />
-                <ExplanationFrame />
-            </div>
-        </main>
-    );
+  const categories = [
+    {
+      title: 'Sorting Algorithms',
+      path: '/algorithms/sorting'
+    },
+    {
+      title: 'Searching Algorithms',
+      path: '/algorithms/searching'
+    },
+    {
+      title: 'Graph Algorithms',
+      path: '/algorithms/graph'
+    }
+  ];
+
+  return (
+    <main style={{ padding: '20px' }}>
+      <h1>Algorithms</h1>
+      <div style={{ 
+        display: 'grid', 
+        gap: '16px',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+      }}>
+        {categories.map((category) => (
+          <CategoryCard 
+            key={category.path}
+            title={category.title}
+            path={category.path}
+          />
+        ))}
+      </div>
+    </main>
+  );
 } 
