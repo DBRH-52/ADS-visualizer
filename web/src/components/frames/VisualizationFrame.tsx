@@ -1,17 +1,17 @@
 'use client';
 
 import React from 'react';
-import styles from '@/styles/components/frames/Frame.module.css';
+import frameStyles from '@/styles/components/frames/Frame.module.css';
 
 interface VisualizationFrameProps {
   children?: React.ReactNode;
 }
 
-const VisualizationFrame: React.FC<VisualizationFrameProps> = ({ children }) => {
+const VisualizationFrame = ({ children }: VisualizationFrameProps) => {
   return (
-    <div className={styles.frame}>
-      <h3 className={styles.title}>Visualization</h3>
-      <div className={styles.content}>
+    <div className={frameStyles.frame}>
+      <h3 className={frameStyles.title}>Visualization</h3>
+      <div className={frameStyles.content}>
         {children || 'Visualization content will be displayed here'}
       </div>
     </div>

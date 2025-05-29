@@ -6,23 +6,23 @@ import VisualizationFrame from '@/components/frames/VisualizationFrame';
 import CodeFrame from '@/components/frames/CodeFrame';
 import ExplanationFrame from '@/components/frames/ExplanationFrame';
 import Breadcrumbs from '@/components/navigation/Breadcrumbs';
-import styles from '@/styles/pages/algorithm.module.css';
+import algorithmStyles from '@/styles/pages/algorithm.module.css';
 
 export default function SortingAlgorithmsPage() {
   return (
-    <main className={styles.container}>
+    <main className={algorithmStyles.container}>
       <Breadcrumbs />
-      <h1 className={styles.title}>Sorting Algorithms</h1>
-      <div className={styles.framesContainer}>
-        <div className={styles.visualizationFrame}>
+      <h1 className={algorithmStyles.title}>Sorting Algorithms</h1>
+      <div className={algorithmStyles.framesContainer}>
+        <div className={algorithmStyles.visualizationFrame}>
           <VisualizationFrame />
         </div>
         
-        <div className={styles.codeFrame}>
+        <div className={algorithmStyles.codeFrame}>
           <CodeFrame />
         </div>
         
-        <div className={styles.explanationFrame}>
+        <div className={algorithmStyles.explanationFrame}>
           <ExplanationFrame />
         </div>
       </div>

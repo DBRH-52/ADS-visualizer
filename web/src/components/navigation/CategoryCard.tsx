@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '@/styles/components/CategoryCard.module.css';
+import categoryStyles from '@/styles/components/CategoryCard.module.css';
 
 interface CategoryCardProps {
   title: string;
@@ -11,10 +11,10 @@ const CategoryCard = ({ title, path }: CategoryCardProps) => {
   return (
     <Link 
       href={path}
-      className={styles.link}
+      className={categoryStyles.link}
     >
-      <div className={styles.card}>
-        <h2 className={styles.title}>{title}</h2>
+      <div className={categoryStyles.card}>
+        <h2 className={categoryStyles.title}>{title}</h2>
       </div>
     </Link>
   );

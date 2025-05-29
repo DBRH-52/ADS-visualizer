@@ -3,7 +3,7 @@
 
 import React from 'react';
 import SectionFrame from '@/components/navigation/SectionFrame';
-import styles from '@/styles/pages/home.module.css';
+import homeStyles from '@/styles/pages/home.module.css';
 
 export default function Home() {
   const sections = [
@@ -18,12 +18,12 @@ export default function Home() {
   ];
 
   return (
-    <main className={styles.container}>
-      <h1 className={styles.title}>
+    <main className={homeStyles.container}>
+      <h1 className={homeStyles.title}>
         Algorithms and Data Structures
       </h1>
 
-      <div className={styles.grid}>
+      <div className={homeStyles.grid}>
         {sections.map((section) => (
           <SectionFrame 
             key={section.path}

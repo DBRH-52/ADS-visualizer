@@ -1,17 +1,17 @@
 'use client';
 
 import React from 'react';
-import styles from '@/styles/components/frames/Frame.module.css';
+import frameStyles from '@/styles/components/frames/Frame.module.css';
 
 interface ExplanationFrameProps {
   children?: React.ReactNode;
 }
 
-const ExplanationFrame: React.FC<ExplanationFrameProps> = ({ children }) => {
+const ExplanationFrame = ({ children }: ExplanationFrameProps) => {
   return (
-    <div className={styles.frame}>
-      <h3 className={styles.title}>Explanation</h3>
-      <div className={styles.content}>
+    <div className={frameStyles.frame}>
+      <h3 className={frameStyles.title}>Explanation</h3>
+      <div className={frameStyles.content}>
         {children || 'Explanation content will be displayed here'}
       </div>
     </div>
