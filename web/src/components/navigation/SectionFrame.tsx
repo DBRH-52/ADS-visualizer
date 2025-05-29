@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import styles from '@/styles/components/SectionFrame.module.css';
+import sectionStyles from '@/styles/components/SectionFrame.module.css';
 
 interface SectionFrameProps {
   title: string;
@@ -13,10 +13,10 @@ const SectionFrame = ({ title, path }: SectionFrameProps) => {
   return (
     <Link 
       href={path}
-      className={styles.link}
+      className={sectionStyles.link}
     >
-      <div className={styles.card}>
-        <h2 className={styles.title}>{title}</h2>
+      <div className={sectionStyles.card}>
+        <h2 className={sectionStyles.title}>{title}</h2>
       </div>
     </Link>
   );
