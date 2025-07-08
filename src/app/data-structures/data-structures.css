@@ -1,0 +1,12 @@
+.data-structures-container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    min-height: 10vh;
+    padding: 2rem;
+}
+
+.data-structures-title {
+    text-align: center;
+    font-size: 1.5rem;
+}
