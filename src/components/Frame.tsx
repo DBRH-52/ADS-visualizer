@@ -1,8 +1,16 @@
 import './Frame.css';
 
+type FrameProps = {
+    selectedType: string;
+    selectedItem: string;
+    selectedLanguage: string;
+}
+
 export default function Frame({
-    selectedType, selectedItem, selectedLanguage
-}) {
+    selectedType, 
+    selectedItem, 
+    selectedLanguage
+}: FrameProps) {
     return (
         <div className="frames-container">
             <div className="visualization-frame">visualization</div>
