@@ -49,9 +49,13 @@ export default function Algorithms() {
                 value={selectedAlgorithm}
                 onChange={handleAlgorithmChange}
             >
+                {/* dynamic dropdown - if the algorithm type dropdown changes, options here change - based on the algorithm type */}
                 <option value="">algorithm</option>
-                <option value="bubble-sort">bubble sort</option>
-                <option value="quick-sort">quick sort</option>
+                {selectedAlgorithmType && algorithms[selectedAlgorithmType]?.map(algorithm => (
+                    <option key={algorithm} value={algorithm}>
+                        {algorithm.replace('-', ' ')}
+                    </option>
+                ))}
             </select>
         
             <select 
