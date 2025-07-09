@@ -17,16 +17,16 @@ export default function DataStructures() {
     tree: ['binary-tree', 'binary-search-tree', 'avl-tree', 'red-black-tree'],
   };
 
-  const handleDataStructureTypeChange = (e) => {
+  const handleDataStructureTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedDataStructureType(e.target.value);
     setSelectedDataStructure('');
   };
 
-  const handleDataStructureChange = (e) => {
+  const handleDataStructureChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedDataStructure(e.target.value);
   };
 
-  const handleLanguageChange = (e) => {
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedLanguage(e.target.value);
   };
 

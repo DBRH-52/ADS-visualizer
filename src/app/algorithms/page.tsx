@@ -16,16 +16,16 @@ export default function Algorithms() {
         searching: ['binary-search', 'linear-search']
     };
 
-    const handleAlgorithmTypeChange = (e) => { // e - event object 
+    const handleAlgorithmTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => { // e - event object 
         setSelectedAlgorithmType(e.target.value);
         setSelectedAlgorithm('');
     };
 
-    const handleAlgorithmChange = (e) => {
+    const handleAlgorithmChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedAlgorithm(e.target.value);
     };
 
-    const handleLanguageChange = (e) => {
+    const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSelectedLanguage(e.target.value);
     };
 
