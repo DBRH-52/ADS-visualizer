@@ -1,0 +1,25 @@
+.frames-container {
+    display: flex; /* allows frames to be displayed side by side */
+    width: 100%; /* full width of the container */
+    height: 70vh; /* 70% of the viewport height */
+    gap: 1rem; /* space between frames (1rem ~ 16px) */
+    margin-top: 1rem; /* space between the frames and the top of the container */
+}
+
+.visualization-frame {
+    width: 50%; /* 50% of the container width */
+    padding: 1rem; /* space inside the frame */
+    border: 1px solid #ccc; /* border around the frame */
+}
+
+.code-frame {
+    width: 25%; /* 25% of the container width */
+    padding: 1rem; /* space inside the frame */
+    border: 1px solid #ccc; /* border around the frame */
+}
+
+.explaination-frame {
+    width: 25%; /* 25% of the container width */
+    padding: 1rem; /* space inside the frame */
+    border: 1px solid #ccc; /* border around the frame */
+}

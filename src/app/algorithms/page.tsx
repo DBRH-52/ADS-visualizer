@@ -1,6 +1,7 @@
 "use client";
 
 import './algorithms.css';
+import Frame from '../../components/Frame';
 
 import { useState } from 'react';
 
@@ -69,6 +70,12 @@ export default function Algorithms() {
             </select>
 
         </div>
+
+        <Frame
+            selectedType={selectedAlgorithmType}
+            selectedItem={selectedAlgorithm}
+            selectedLanguage={selectedLanguage}
+        />
 
       </div>
     );
