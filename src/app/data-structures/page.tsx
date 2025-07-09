@@ -1,7 +1,9 @@
+import './data-structures.css';
+
 export default function DataStructures() {
     return (
-      <div>
-        <h1>Data Structures</h1>
+      <div className="data-structures-container">
+        <h1 className="data-structures-title">Data Structures</h1>
       </div>
     );
   }
