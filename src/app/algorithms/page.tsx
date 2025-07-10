@@ -1,7 +1,8 @@
 "use client";
 
 import './algorithms.css';
-import Frame from '../../components/Frame';
+import Frame from '../../components/Frame/Frame';
+import Dropdowns from '../../components/Dropdowns/Dropdowns';
 
 import { useState } from 'react';
 
@@ -11,65 +12,32 @@ export default function Algorithms() {
     const [selectedAlgorithm, setSelectedAlgorithm] = useState('');
     const [selectedLanguage, setSelectedLanguage] = useState('');
 
-    const algorithms = {
-        sorting: ['bubble-sort', 'quick-sort'],
-        searching: ['binary-search', 'linear-search']
-    };
-
-    const handleAlgorithmTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => { // e - event object 
-        setSelectedAlgorithmType(e.target.value);
+    const handleAlgorithmTypeChange = (value: string) => {
+        setSelectedAlgorithmType(value);
         setSelectedAlgorithm('');
     };
 
-    const handleAlgorithmChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setSelectedAlgorithm(e.target.value);
+    const handleAlgorithmChange = (value: string) => {
+        setSelectedAlgorithm(value);
     };
 
-    const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        setSelectedLanguage(e.target.value);
+    const handleLanguageChange = (value: string) => {
+        setSelectedLanguage(value);
     };
 
     return (
       <div className="algorithms-container">
         <h1 className="algorithms-title">Algorithms</h1>
 
-        <div className="dropdowns-container">
-
-            <select 
-                className="dropdown"
-                value={selectedAlgorithmType}
-                onChange={handleAlgorithmTypeChange}
-                >
-                <option value="">algorithm type</option>
-                <option value="sorting">sorting</option>
-                <option value="searching">searching</option>
-            </select>
-
-            <select 
-                className="dropdown"
-                value={selectedAlgorithm}
-                onChange={handleAlgorithmChange}
-            >
-                {/* dynamic dropdown - if the algorithm type dropdown changes, options here change - based on the algorithm type */}
-                <option value="">algorithm</option>
-                {selectedAlgorithmType && algorithms[selectedAlgorithmType]?.map(algorithm => (
-                    <option key={algorithm} value={algorithm}>
-                        {algorithm.replace('-', ' ')}
-                    </option>
-                ))}
-            </select>
-        
-            <select 
-                className="dropdown"
-                value={selectedLanguage}
-                onChange={handleLanguageChange}
-            >
-                <option value="">language</option>
-                <option value="python">python</option>
-                <option value="javascript">javascript</option>
-            </select>
-
-        </div>
+        <Dropdowns
+            pageType="algorithms"
+            onTypeChange={handleAlgorithmTypeChange}
+            onItemChange={handleAlgorithmChange}
+            onLanguageChange={handleLanguageChange}
+            selectedType={selectedAlgorithmType}
+            selectedItem={selectedAlgorithm}
+            selectedLanguage={selectedLanguage}
+        />
 
         <Frame
             selectedType={selectedAlgorithmType}
