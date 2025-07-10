@@ -1,7 +1,7 @@
 "use client";
 
 import './data-structures.css';
-import Frame from '../../components/Frame';
+import Frame from '../../components/Frame/Frame';
 import Dropdowns from '../../components/Dropdowns/Dropdowns';
 
 import { useState } from 'react';
