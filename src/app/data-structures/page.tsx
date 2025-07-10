@@ -2,7 +2,7 @@
 
 import './data-structures.css';
 import Frame from '../../components/Frame';
-import Dropdowns from '../../components/Dropdowns';
+import Dropdowns from '../../components/Dropdowns/Dropdowns';
 
 import { useState } from 'react';
 

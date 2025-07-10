@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import DropdownsView from "./DropdownsView";
 
 type DropdownProps = {
     pageType: 'algorithms' | 'data-structures';
@@ -169,60 +170,17 @@ export default function Dropdowns({
     };
 
     return (
-        <div className="dropdowns-container">
-          <select 
-            className="dropdown"
-            value={selectedType}
-            onChange={(e) => onTypeChange(e.target.value)}
-          >
-            <option value="">
-              {pageType === 'algorithms' ? 'algorithm type' : 'data structure type'}
-            </option>
-            {getTypeOptions().map(option => (
-              <option 
-                key={option.value} 
-                value={option.value}
-              >
-                {option.label}
-              </option>
-            ))}
-          </select>
-    
-          <select 
-            className="dropdown"
-            value={selectedItem}
-            onChange={(e) => onItemChange(e.target.value)}
-          >
-            <option value="">
-              {pageType === 'algorithms' ? 'algorithm' : 'data structure'}
-            </option>
-            {getItemOptions().map(item => (
-              <option 
-                key={item} 
-                value={item}
-              >
-                {item.replace('-', ' ')}
-              </option>
-            ))}
-          </select>
-
-          <select 
-            className="dropdown"
-            value={selectedLanguage}
-            onChange={(e) => onLanguageChange(e.target.value)}
-          >
-            <option value="">
-              language
-            </option>
-            {languages.map(lang => (
-              <option 
-                key={lang} 
-                value={lang}
-              >
-                {lang}
-              </option>
-            ))}
-          </select>
-        </div>
-      );
-    }
+        <DropdownsView
+            pageType={pageType}
+            onTypeChange={onTypeChange}
+            onItemChange={onItemChange}
+            onLanguageChange={onLanguageChange}
+            selectedType={selectedType}
+            selectedItem={selectedItem}
+            selectedLanguage={selectedLanguage}
+            getTypeOptions={getTypeOptions}
+            getItemOptions={getItemOptions}
+            languages={languages}
+        />
+    );
+}
