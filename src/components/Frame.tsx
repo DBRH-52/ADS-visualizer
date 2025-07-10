@@ -15,7 +15,7 @@ export default function Frame({
         <div className="frames-container">
             <div className="visualization-frame">visualization</div>
             <div className="code-frame">code</div>
-            <div className="explaination-frame">explaination</div>
+            <div className="explanation-frame">explanation</div>
         </div>
     );
 }
