@@ -6,16 +6,20 @@ type DropdownProps = {
     pageType: 'algorithms' | 'data-structures';
     onTypeChange: (value: string) => void;
     onItemChange: (value: string) => void;
+    onLanguageChange: (value: string) => void;
     selectedType: string;
     selectedItem: string;
+    selectedLanguage: string;
 }
 
 export default function Dropdowns({
     pageType,
     onTypeChange,
     onItemChange,
+    onLanguageChange,
     selectedType,
-    selectedItem
+    selectedItem,
+    selectedLanguage
 }: DropdownProps) {
 
     const algorithms = {
@@ -129,6 +133,8 @@ export default function Dropdowns({
         ]
     };
 
+    const languages = ['python', 'javascript', 'cpp', 'java'];
+
     const getTypeOptions = () => {
         if (pageType === 'algorithms') {
             return [
@@ -151,11 +157,13 @@ export default function Dropdowns({
     };
 
     const getItemOptions = () => {
+        if (!selectedType) return [];
+        
         if (pageType === 'algorithms') {
-            return algorithms[selectedType as keyof typeof algorithms];
+            return algorithms[selectedType as keyof typeof algorithms] || [];
         } 
         else if (pageType === 'data-structures') {
-            return dataStructures[selectedType as keyof typeof dataStructures];
+            return dataStructures[selectedType as keyof typeof dataStructures] || [];
         }
         return [];
     };
@@ -167,9 +175,14 @@ export default function Dropdowns({
             value={selectedType}
             onChange={(e) => onTypeChange(e.target.value)}
           >
-            <option value="">{pageType === 'algorithms' ? 'algorithm type' : 'data structure type'}</option>
+            <option value="">
+              {pageType === 'algorithms' ? 'algorithm type' : 'data structure type'}
+            </option>
             {getTypeOptions().map(option => (
-              <option key={option.value} value={option.value}>
+              <option 
+                key={option.value} 
+                value={option.value}
+              >
                 {option.label}
               </option>
             ))}
@@ -180,10 +193,33 @@ export default function Dropdowns({
             value={selectedItem}
             onChange={(e) => onItemChange(e.target.value)}
           >
-            <option value="">{pageType === 'algorithms' ? 'algorithm' : 'data structure'}</option>
+            <option value="">
+              {pageType === 'algorithms' ? 'algorithm' : 'data structure'}
+            </option>
             {getItemOptions().map(item => (
-              <option key={item} value={item}>
+              <option 
+                key={item} 
+                value={item}
+              >
                 {item.replace('-', ' ')}
+              </option>
+            ))}
+          </select>
+
+          <select 
+            className="dropdown"
+            value={selectedLanguage}
+            onChange={(e) => onLanguageChange(e.target.value)}
+          >
+            <option value="">
+              language
+            </option>
+            {languages.map(lang => (
+              <option 
+                key={lang} 
+                value={lang}
+              >
+                {lang}
               </option>
             ))}
           </select>
