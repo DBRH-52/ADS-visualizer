@@ -1,7 +1,4 @@
-
-import bubbleSort_cpp from "./sorting/bubble-sort/code/bubble-sort.cpp?raw";
-import bubbleSort_js from "./sorting/bubble-sort/code/bubble-sort.js?raw";
-import bubbleSort_py from "./sorting/bubble-sort/code/bubble-sort.py?raw";
+import { bubbleSortCode } from './sorting/bubble-sort/code/bubble-sort-code';
 
 //------------------ SORTING ALGORITHMS ------------------//
 // BUBBLE SORT //
@@ -15,11 +12,7 @@ import bubbleSort_py from "./sorting/bubble-sort/code/bubble-sort.py?raw";
 // COUNTING SORT //
 
 export const algorithmsCode: Record<string, Record<string, string>> = {
-    'bubble-sort': {
-        'cpp': bubbleSort_cpp,
-        'js': bubbleSort_js,
-        'py': bubbleSort_py
-    }
+    'bubble-sort': bubbleSortCode
 };
 
 export const getAlgorithmCode = (
