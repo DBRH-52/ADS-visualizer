@@ -30,19 +30,18 @@ void quickSort(int arr[], int low, int high)
 int main() 
 {
     int arr[] = {64, 34, 25, 12, 22, 11, 90};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    
+
     std::cout << "Unsorted array: ";
-    for (int i = 0; i < n; i++) 
+    for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) 
     {
         std::cout << arr[i] << " ";
     }
     std::cout << std::endl;
     
-    quickSort(arr, 0, n - 1);
+    quickSort(arr, 0, sizeof(arr) / sizeof(arr[0]) - 1);
     
     std::cout << "Sorted array: ";
-    for (int i = 0; i < n; i++) 
+    for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) 
     {
         std::cout << arr[i] << " ";
     }
