@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -26,5 +27,5 @@ body {
     linear-gradient(to bottom, #e0e0e033 1px, transparent 1px);
   background-size: 30px 30px;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
