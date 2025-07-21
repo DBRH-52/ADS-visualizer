@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "../components/Navbar/Navbar";
+import { colors_dark_mode } from "../styles/design-system";
 
 export default function RootLayout({
   children,
@@ -11,7 +12,12 @@ export default function RootLayout({
       <head>
         <title>ADS Visualizer</title>
       </head>
-      <body>
+      <body
+        style={{
+          '--frame-background': colors_dark_mode.frame,
+          '--frame-border': colors_dark_mode.border,
+        } as React.CSSProperties}
+      >
         <Navbar />
         {children} {/*content from each page goes here*/}
       </body>

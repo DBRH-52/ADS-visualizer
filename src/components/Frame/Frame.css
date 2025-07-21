@@ -1,5 +1,6 @@
 .frames-container {
-    background-color: #000000;
+    background-color: var(--frame-background);
+    color: var(--frame-color);
     display: flex; /* allows frames to be displayed side by side */
     width: 100%; /* full width of the container */
     height: 70vh; /* 70% of the viewport height */
@@ -9,18 +10,18 @@
 
 .visualization-frame {
     width: 50%; /* 50% of the container width */
-    padding: 1rem; /* space inside the frame */
-    border: 1px solid #ccc; /* border around the frame */
+    padding: var(--frame-padding); /* space inside the frame */
+    border: 1px solid var(--frame-border); /* border around the frame */
 }
 
 .code-frame {
     width: 25%; /* 25% of the container width */
-    padding: 1rem; /* space inside the frame */
-    border: 1px solid #ccc; /* border around the frame */
+    padding: var(--frame-padding); /* space inside the frame */
+    border: 1px solid var(--frame-border); /* border around the frame */
 }
 
 .explanation-frame {
     width: 25%; /* 25% of the container width */
-    padding: 1rem; /* space inside the frame */
-    border: 1px solid #ccc; /* border around the frame */
+    padding: var(--frame-padding); /* space inside the frame */
+    border: 1px solid var(--frame-border); /* border around the frame */
 }
