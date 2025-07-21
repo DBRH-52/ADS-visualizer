@@ -24,6 +24,9 @@ export default function RootLayout({
           '--navbar-font': fonts.primary,
           '--navbar-gap': spacing.lg,
           '--navbar-padding': `${spacing.md} ${spacing.lg}`,
+          '--dropdown-background': colors_dark_mode.frame,
+          '--dropdown-color': colors_dark_mode.foreground,
+          '--dropdown-border': colors_dark_mode.border,
         } as React.CSSProperties}
       >
         <Navbar />
