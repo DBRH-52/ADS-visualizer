@@ -1,9 +1,12 @@
 .navbar {
-  background-color: #000000;
+  background-color: var(--navbar-background);
+  color: var(--navbar-color);
+  font-family: var(--navbar-font), sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: var(--navbar-padding);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar-brand {
@@ -12,9 +15,10 @@
 
 .navbar-links {
   display: flex;
-  gap: 2rem;
+  gap: var(--navbar-gap);
 }
 
 .navbar-links a {
   text-decoration: none;
+  color: var(--navbar-color);
 } 
